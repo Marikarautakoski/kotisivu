@@ -1,58 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Milan kotisivu</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-        <h1>Milan elämää</h1>
-        <nav>
-            <a href="#information">Tietoa rodusta</a>
-            <a href="#gallery.html">Galleria</a>
-            <a href="#contact">Yhteystiedot</a>
+        <h1>MILAN ELÄMÄÄ</h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Etusivu</a></li>
+                <li><a href="information.html">Tietoa rodusta</a></li>
+                <li><a href="gallery.html">Galleria</a></li>
+                <li><a href="contact.html">Yhteystiedot</a></li>
+            </ul>
         </nav>
-
     </header>
-    <main>
-        <aside>
-            <h2 id="sivupalkinotsikko">Sivupalkin otsikko</h2>
-            <p>Sivupalkki alkaa tästä</p>
-            <p>tekstiä tulossa....</p>
-        </aside>
+    <main class="container">
+        <section class="intro">
+            <h2>Tervetuloa!</h2>
+            <p>Tervetuloa koirani Milan kotisivuille.
+                Sivuilta löydät tietoa koirastani Milasta ja yleistä tietoa coton de tulear rodusta.</p>
+            <p>Löydät myös kuvagallerian ja yhteystiedoista linkit instagramiin ja yhteystietoihini. </p>
+        </section>
+        <section class="carousel-section">
+            <p>Voit skrollata kuvakarusellia vaakasuunnassa. Lisää kuvia löydät "Galleria"-osiosta.</p>
+            <div class="carousel">
+                <figure class="carousel-item" id="slide1">
+                    <img src="images/mila6.jpg" alt="Mila kivellä">
+                    <figcaption>Mila kivellä</figcaption>
+                </figure>
+                <figure class="carousel-item" id="slide2">
+                    <img src="images/mila7.jpg" alt="Mila kalliolla">
+                    <figcaption>Mila kalliolla</figcaption>
+                </figure>
+                <figure class="carousel-item" id="slide3">
+                    <img src="images/mila8.jpg" alt="Mila kalliolla">
+                    <figcaption>Mila kalliolla</figcaption>
+                </figure>
+                <figure class="carousel-item" id="slide4">
+                    <img src="images/mila9.jpg" alt="Mila kannolla">
+                    <figcaption>Mila kannolla</figcaption>
+                </figure>
+                <figure class="carousel-item" id="slide5">
+                    <img src="images/milatitoroope.JPG" alt="Mila, Tito ja Roope">
+                    <figcaption>Mila, Tito ja Roope</figcaption>
+                </figure>
+                <figure class="carousel-item" id="slide6">
+                    <img src="images/milaroope.jpg" alt="Mila ja Roope">
+                    <figcaption>Mila ja Roope</figcaption>
+                </figure>
+            </div>
+            <nav class="carousel-nav">
+                <a href="#slide1">1</a>
+                <a href="#slide2">2</a>
+                <a href="#slide3">3</a>
+                <a href="#slide4">4</a>
+                <a href="#slide5">5</a>
+                <a href="#slide6">6</a>
+            </nav>
+        </section>
+        <section>
+            <h2>Mila </h2>
 
-        <div class="sisalto">
+            <p>Mila on 9-vuotias coton de tulear. Hän on leikkisä ja iloinen. Hänen lempipuuhaa ovat lenkit metsässä,
+                rannalla kahlaaminen, hiekan kaivaminen sekä lenpileluilla leikkiminen. </p>
 
-            <h2 id="tervetuloa">Tervetuloa!</h2>
-            <p></p>
-            <p>Tervetuloa koirani kotisivuille.
-                Sivuilta löydät tietoa koirastani Milasta ja yleistä tietoa coton de tulear rodusta.
-                Löydät myös kuvagallerian ja yhteystiedoista linkit sosiaaliseen mediaan. </p>
-            <section>
+        </section>
 
-                <div>
-                    (kuva tulossa tähän)
-                </div>
 
-            </section>
-            <h3 id="Mila">Mila</h3>
-            <section>
-
-                <p>Mila on 9-vuotias coton de tulear. Hän on leikkisä ja iloinen. </p>
-
-            </section>
-
-        </div>
 
     </main>
     <footer>
         <p>Web-kehittämisen perusteet harjoitustyö</p>
-        <p>Julkaistu: <time datetime="2026-09-10">10.9.2026</time></p>
-        <p>&copy; Marika Rautakoski</p>
+        <p>Julkaistu: <time datetime="2026-09-10"></time>29.9.2026</time></p>
+        <p>&copy; Marika</p>
     </footer>
 </body>
 
