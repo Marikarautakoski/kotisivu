@@ -1,4 +1,6 @@
-* Perusasetukset */ * {
+* Perusasetukset */ *
+
+{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -11,48 +13,109 @@ body {
 
 }
 
+h2 {
+    margin-bottom: 15px;
+}
+/* old pink Header
 
-/* Header */
 header {
     background-color: #D8B4B4;
     color: #493B38;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    min-height: 280px;
     padding: 20px 40px;
+    position: relative;
     text-align: center;
+}
+*/
+
+/* Header */
+header {
+    color: #493B38;
+    height: 350px;
+    padding: 10px 40px;
+    position: relative;
+    text-align: center;
+    isolation: isolate;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+/* transparent backround */
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../images/kopioetusivu.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.30;
+    z-index: -1;
 }
 
 header h1 {
-    margin-bottom: 10px;
+    font-family: "Great Vibes", cursive;
+    font-size: 78px;
+    font-weight: 400;
+    margin-top: 100px;
+    margin-left: -190px;
+}
+ /* Logo headerissa */
+.logo {
+    position: absolute;
+    left: 40px;
+    top: 0;
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+.header-content {
+    
+    margin-bottom: 20px;
 }
 
 /* Navigaatio */
+
+.nav {
+    background-color: rgba(216, 180, 180, 0.75);
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .nav ul {
-    gap: 0;
     display: flex;
     list-style: none;
-    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 
 .nav li {
     flex: 1;
-    max-width: 200px;
 
 }
 
-nav a {
+.nav a {
     display: block;
     color: #2f2424;
-    margin: 0 10px;
     text-decoration: none;
+    text-align: center;
     padding: 10px 10px;
 }
 
-nav a:hover {
+.nav a:hover {
     text-decoration: underline;
 }
 
 
-/* Pääsisältö */
+/* Main content */
 
 .container {
     width: 90%;
@@ -74,34 +137,25 @@ nav a:hover {
 }
 
 
-main {
-    max-width: 1100px;
-    margin: 30px auto;
-    padding: 0 20px;
-    gap: 25px;
-    align-items: flex-start;
-}
-
-
 /* Sectionit */
 
 .intro {
     background-color: #EADBD2;
-    max-width: 700px;
     border-radius: 8px;
     margin-bottom: 40px;
 }
 
+/* Gallery */
 .gallery-section {
     margin-bottom: 40px;
 }
 
 .gallery {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
 }
+
 
 .gallery-item {
     flex: 1 1 300px;
@@ -109,13 +163,14 @@ main {
     background-color: #D8B4B4;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .gallery-item img {
     width: 100%;
-    height: 300px;
+    height: 220px;
     object-fit: cover;
+    display: block;
 }
 
 .gallery-item figcaption {
@@ -152,7 +207,7 @@ main {
     background-color: #D8B4B4;
     border-radius: 8px;
     scroll-snap-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     padding-top: 20px;
 }
@@ -195,6 +250,8 @@ main {
     color: #493B38;
 }
 
+/* Contact section */
+
 .koiralinkit a {
     color: #493B38;
     text-decoration: none;
@@ -213,6 +270,121 @@ main {
     text-decoration: underline;
 }
 
+.contact-logo {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.contact-logo img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+/* Latest articles section */
+.latest-articles {
+    margin-bottom: 40px;
+}
+
+.latest-articles h2 {
+    margin-bottom: 35px;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: #D8B4B4;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.card-content {
+    padding: 20px 5px 5px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #493B38;
+}
+
+.card p {
+    margin-bottom: 15px;
+}
+
+.card a {
+    color: #493B38;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Blog post */
+.blog-post {
+    background-color: #EDE0D8;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.blog-post h2 {
+    color: #765A56;
+    margin-bottom: 8px;
+}
+
+.blog-date {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #765A56;
+}
+
+.blog-post img {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: 15px auto 20px;
+    border-radius: 10px;
+}
+
+.blog-post p {
+    margin-bottom: 10px;
+}
+
+/* Picture in container section */
+.container section figure {
+    background-color: #D8B4B4;
+    padding: 8px;
+    margin: 25px auto;
+    max-width: 650px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.container section figure img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+/* Footer */
 
 footer {
     background-color: #D8B4B4;
@@ -220,4 +392,26 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 20px;
+}
+
+/* arrow up button */
+.takaisin-ylos {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 200;
+
+    display: grid;
+    place-items: center;
+    width: 58px;
+    height:58px;
+    color: white
+    border radius: 50%;
+    font size: 2rem;
+    text-decoration: none;
+    box-shadow: 0 5px 12px #003;
+}
+
+.takaisin-ylos:hover, takaisin-ylos:focus {
+    text-decoration: underline;
 }

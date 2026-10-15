@@ -5,45 +5,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Milan kotisivu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body id="alku">
+    <!-- Header -->
     <header>
-        <h1>MILAN ELÄMÄÄ</h1>
-        <nav class="nav">
-            <ul>
-                <li><a href="index.html">Etusivu</a></li>
-                <li><a href="information.html">Tietoa rodusta</a></li>
-                <li><a href="gallery.html">Galleria</a></li>
-                <li><a href="contact.html">Yhteystiedot</a></li>
-            </ul>
-        </nav>
+        <img class="logo" src="images/logo.png" alt="Milan elämää -logo">
+
+        <div class="header-content">
+            <h1>Milan elämää</h1>
+            <!-- Navigation -->
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Etusivu</a></li>
+                    <li><a href="information.html">Tietoa rodusta</a></li>
+                    <li><a href="gallery.html">Kuvagalleria</a></li>
+                    <li><a href="blogi.html">Blogi</a></li>
+                    <li><a href="contact.html">Yhteystiedot</a></li>
+                </ul>
+            </nav>
+            </div>
     </header>
+    <!-- Main content -->
     <main class="container">
         <section class="intro">
             <h2>Tervetuloa!</h2>
             <p>Tervetuloa koirani Milan kotisivuille.
-                Sivuilta löydät tietoa koirastani Milasta ja yleistä tietoa coton de tulear rodusta.</p>
-            <p>Löydät myös kuvagallerian ja yhteystiedoista linkit instagramiin ja yhteystietoihini. </p>
+                Näillä kotisivuilla voit seurata Milan arkielämää ja seikkailuja, katsella kuvia päivittäisistä puuhista ja tutustua myös yleisesti coton de
+                tulear -rotuun.
+            </p>
+        </section>
+        <section>
+            <h2>Mila </h2>
+
+            <p>Mila on 9-vuotias coton de tulear, iloinen, seurallinen ja leikkisä koira. Hän on
+                luonteeltaan utelias ja kiinnostunut ympäristöstään ja aina innokas tutustumaan uusiin ihmisiin. Hän rakastaa pysähtyä lenkeillä
+                tutkimaan uusia tuoksuja ja paikkoja.
+            </p>
+            <p>Milan lempipuuhaa ovat metsälenkit, rannalla kahlaaminen, hiekan kaivaminen ja leluilla
+                leikkiminen. Metsässä Mila viihtyy erityisen hyvin, sillä siellä riittää paljon tutkittavaa.
+                Myös rannalla on mukava käydä, varsinkin silloin kun pääsee kahlailemaan vedessä.
+            </p>
+            <p> Vaikka Mila on jo 9-vuotias, hän on edelleen leikkisä ja innostuu helposti erilaisista
+                tekemisistä. Hän nauttii yhdessä vietetystä ajasta ja on mielellään mukana kaikissa arjen touhuissa.
+            </p>
+            <p>
+                Mila on rakas perheenjäsen ja hänen kanssaan jokainen päivä on täynnä iloa. Näillä
+                sivuilla pääsee tutustumaan Milan elämään, hänen lempipuuhiinsa ja yleisesti coton de tulear rotuun.</p>
+            </p>
+        </section>
+        <!-- cards -->
+        <section class="latest-articles">
+            <h2>Uusimmat kuulumiset</h2>
+
+            <div class="article-grid">
+
+                <article class="card">
+                    <img src="images/mila1.JPG" alt="Mila vaaleanpunaisessa takissa">
+
+                    <div class="card-content">
+                        <h3>Milan uusi takki</h3>
+
+                        <p>
+                            Mila sai uuden vaaleanpunaisen takin.
+                            Uusi takki pääsi heti ulkoiluun mukaan.
+                        </p>
+
+                        <a href="blogi.html#uusi-takki">Lue lisää</a>
+                    </div>
+                </article>
+
+
+                <article class="card">
+                    <img src="images/mila6.JPG" alt="Mila istuu kivellä">
+
+                    <div class="card-content">
+                        <h3>Metsäretkellä</h3>
+
+                        <p>
+                            Kävimme Milan kanssa metsälenkillä.
+                            Matkan varrella löytyi paljon kiinnostavia hajuja tutkittavaksi.
+                        </p>
+
+                        <a href="blogi.html#metsaretki">Lue lisää</a>
+                    </div>
+                </article>
+
+
+                <article class="card">
+                    <img src="images/mila7.JPG" alt="Mila kalliolla">
+
+                    <div class="card-content">
+                        <h3>Syksyinen päivä</h3>
+
+                        <p>
+                            Syksyinen ulkoilupäivä ja kaunis päivä.
+                        </p>
+
+                        <a href="blogi.html#syksyinen-paiva">Lue lisää</a>
+                    </div>
+                </article>
+
+
+                <article class="card">
+                    <img src="images/IMG_3624.JPG" alt="Mila ja huivi">
+
+                    <div class="card-content">
+                        <h3>Kuvaamassa</h3>
+
+                        <p>
+                            Tänään kävimme kuvaamassa metsässä.
+
+                        </p>
+
+                        <a href="blogi.html#mila-ja-huivi">Lue lisää</a>
+                    </div>
+                </article>
+
+            </div>
+            <!-- Carousel -->
         </section>
         <section class="carousel-section">
-            <p>Voit skrollata kuvakarusellia vaakasuunnassa. Lisää kuvia löydät "Galleria"-osiosta.</p>
+
             <div class="carousel">
                 <figure class="carousel-item" id="slide1">
-                    <img src="images/mila6.jpg" alt="Mila kivellä">
+                    <img src="images/mila6.JPG" alt="Mila kivellä">
                     <figcaption>Mila kivellä</figcaption>
                 </figure>
                 <figure class="carousel-item" id="slide2">
-                    <img src="images/mila7.jpg" alt="Mila kalliolla">
+                    <img src="images/mila7.JPG" alt="Mila kalliolla">
                     <figcaption>Mila kalliolla</figcaption>
                 </figure>
                 <figure class="carousel-item" id="slide3">
-                    <img src="images/mila8.jpg" alt="Mila kalliolla">
+                    <img src="images/mila8.JPG" alt="Mila kalliolla">
                     <figcaption>Mila kalliolla</figcaption>
                 </figure>
                 <figure class="carousel-item" id="slide4">
-                    <img src="images/mila9.jpg" alt="Mila kannolla">
+                    <img src="images/mila9.JPG" alt="Mila kannolla">
                     <figcaption>Mila kannolla</figcaption>
                 </figure>
                 <figure class="carousel-item" id="slide5">
@@ -51,8 +153,8 @@
                     <figcaption>Mila, Tito ja Roope</figcaption>
                 </figure>
                 <figure class="carousel-item" id="slide6">
-                    <img src="images/milaroope.jpg" alt="Mila ja Roope">
-                    <figcaption>Mila ja Roope</figcaption>
+                    <img src="images/IMG_3624.JPG" alt="Mila ja Roope">
+                    <figcaption>Mila huivi kaulassa</figcaption>
                 </figure>
             </div>
             <nav class="carousel-nav">
@@ -64,22 +166,22 @@
                 <a href="#slide6">6</a>
             </nav>
         </section>
-        <section>
-            <h2>Mila </h2>
 
-            <p>Mila on 9-vuotias coton de tulear. Hän on leikkisä ja iloinen. Hänen lempipuuhaa ovat lenkit metsässä,
-                rannalla kahlaaminen, hiekan kaivaminen sekä lenpileluilla leikkiminen. </p>
-
-        </section>
 
 
 
     </main>
+    <!-- Footer -->
     <footer>
         <p>Web-kehittämisen perusteet harjoitustyö</p>
-        <p>Julkaistu: <time datetime="2026-09-10"></time>29.9.2026</time></p>
+        <p>Julkaistu: <time datetime="2026-09-10">29.9.2026</time></p>
         <p>&copy; Marika</p>
     </footer>
+
+    <!-- up button -->
+     
+
+    <a class="takaisin-ylos" href="#alku">&uarr;</a>
 </body>
 
 </html>
