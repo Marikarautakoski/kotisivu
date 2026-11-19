@@ -1,7 +1,6 @@
 /* Perusasetukset */
 * {
     box-sizing: border-box;
- 
 }
 
 body {
@@ -10,7 +9,6 @@ body {
     color: #2f2424;
     margin: 0;
     padding: 0;
-
 }
 
 h2 {
@@ -48,6 +46,7 @@ header h1 {
     margin-top: 100px;
     margin-left: -190px;
 }
+
  /* Logo in header */
 .logo {
     position: absolute;
@@ -59,12 +58,10 @@ header h1 {
 }
 
 .header-content {
-    
     margin-bottom: 20px;
 }
 
 /* Navigaatio */
-
 .nav {
     background-color: rgba(216, 180, 180, 0.75);
     padding: 10px 0;
@@ -87,7 +84,6 @@ header h1 {
 
 .nav li {
     flex: 1;
-
 }
 
 .nav a {
@@ -104,7 +100,6 @@ header h1 {
 
 
 /* Main content */
-
 .container {
     width: 90%;
     max-width: 1100px;
@@ -126,7 +121,6 @@ header h1 {
 
 
 /* Sectionit */
-
 .intro {
     background-color: #EADBD2;
     border-radius: 8px;
@@ -191,14 +185,12 @@ header h1 {
 }
 
 /* Carousel */
-
 .carousel-section {
     margin-bottom: 20px;
     margin-top: 20px;
 }
 
 .carousel-section p {
-
     margin-bottom: 10px;
 }
 
@@ -232,7 +224,6 @@ header h1 {
 }
 
 .carousel-item figcaption {
-
     padding: 30px;
     text-align: center;
     font-size: 18px;
@@ -263,7 +254,6 @@ header h1 {
 }
 
 /* Information section */
-
 .koiralinkit a {
     color: #493B38;
     text-decoration: none;
@@ -499,7 +489,6 @@ input:user-invalid, select:user-invalid textarea:user-invalid {
 }
 
 /* Footer */
-
 footer {
     background-color: #D8B4B4;
     color: #493B38;
@@ -528,4 +517,337 @@ footer {
 
 .takaisin-ylos:hover, .takaisin-ylos:focus {
     text-decoration: underline;
+}
+
+
+/* Media queries */
+
+
+/* Tablets and small laptops */
+@media screen and (max-width: 1024px) {
+
+    header {
+        height: 320px;
+        padding: 10px 20px;
+    }
+
+    header h1 {
+        font-size: 65px;
+        margin-left: 0;
+        margin-top: 85px;
+    }
+
+    .logo {
+        width: 190px;
+        height: 190px;
+        left: 15px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 30px;
+    }
+
+    .article-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .carousel-item {
+        flex: 0 0 85%;
+    }
+
+    .contact-logo img {
+        max-width: 100%;
+    }
+}
+
+/* Smartphones and small tablets */
+@media screen and (max-width: 768px) {
+
+    /* Header */
+    header {
+        height: auto;
+        min-height: 0;
+        padding: 15px 10px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* logo */
+    .logo {
+        display: none;
+    }
+
+    .header-content {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    header h1 {
+        font-size: 45px;
+        margin: 5px 0 15px;
+    }
+
+    /* Navigation */
+      .nav {
+        position: static;
+        width: 100%;
+        padding: 10px;
+        background-color: rgba(216, 180, 180, 0.85);
+    }
+
+    .nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .nav li {
+        width: 100%;
+    }
+
+    .nav a {
+        display: block;
+        background-color: #F3E9E2;
+        color: #493B38;
+        padding: 12px 5px;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 14px;
+        text-decoration: none;
+        transition: background-color 0.2s;
+    }
+
+    .nav a:hover {
+        background-color: #825a5a;
+        color: white;
+    }
+
+    /* Main content */
+    .container {
+        width: 95%;
+        padding: 20px 15px;
+        margin: 20px auto;
+    }
+
+    /* h2 and p */
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    /* Article grid */
+    .article-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    .card img {
+        height: 220px;
+    }
+
+    .card-content {
+        padding: 15px 5px 5px;
+    }
+
+    .latest-articles h2 {
+        margin-bottom: 20px;
+    }
+
+    /* Gallery */
+    .gallery {
+        flex-direction: column;
+    }
+
+    .gallery-item {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    /* Carousel */
+    .carousel {
+        gap: 12px;
+    }
+
+    .carousel-item {
+        flex: 0 0 90%;
+        padding-top: 10px;
+    }
+
+    .carousel-item img {
+        height: 220px;
+    }
+
+    .carousel-item figcaption {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .carousel-nav {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .carousel-nav a {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Videos */
+    .gallery-video {
+        height: auto;
+        max-height: 300px;
+    }
+
+    /* Contact */
+    .contact {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .contact th,
+    .contact td {
+        padding: 10px;
+        overflow-wrap: anywhere;
+    }
+
+    .contact-logo img {
+        width: 180px;
+        height: 180px;
+        max-width: 100%;
+    }
+
+    /* Form */
+    form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Blog */
+    .blog-post {
+        padding: 18px;
+    }
+
+    .blog-post img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    /* Up arrow */
+       .takaisin-ylos {
+        width: 45px;
+        height: 45px;
+        right: 12px;
+        bottom: 12px;
+        font-size: 1.5rem;
+    }
+}
+
+
+/* smaller screens like small phones */
+@media screen and (max-width: 480px) {
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    /* logo */
+    .logo {
+        display: none;
+    }
+
+    /* Navigation */
+    .nav {
+        position: static;
+        width: 100%;
+        padding: 10px;
+        background-color: rgba(216, 180, 180, 0.85);
+    }
+
+    .nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .nav li {
+        width: 100%;
+    }
+
+    .nav a {
+        display: block;
+        background-color: #F3E9E2;
+        color: #493B38;
+        padding: 12px 5px;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 14px;
+        text-decoration: none;
+        transition: background-color 0.2s;
+    }
+
+    .nav a:hover {
+        background-color: #825a5a;
+        color: white;
+    }
+
+    .container {
+        width: 96%;
+        padding: 15px 12px;
+    }
+
+    /* cards */
+    .card img {
+        height: 180px;
+    }
+
+    /* Carousel */
+    .carousel-item {
+        flex: 0 0 95%;
+    }
+
+    .carousel-item img {
+        height: 180px;
+    }
+
+    .carousel-nav a {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* contact */
+    .contact th,
+    .contact td {
+        padding: 8px 5px;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 13px;
+    }
+
+    /* Up arrow */  
+    .takaisin-ylos {
+        width: 45px;
+        height: 45px;
+        right: 12px;
+        bottom: 12px;
+        font-size: 1.5rem;
+    }
+
 }
